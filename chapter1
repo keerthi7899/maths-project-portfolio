@@ -1,1 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chapter 1 - Description of Data</title>
+
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: #eef3ff;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1f3c88;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        ul {
+            margin-left: 25px;
+        }
+
+        .content {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 12px rgba(0,0,0,0.2);
+            max-width: 950px;
+            margin: auto;
+        }
+
+        .formula {
+            background: #f5f7ff;
+            padding: 10px;
+            border-left: 5px solid #4a6ee0;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="content">
+
+<h1>Chapter 1 : Description of Data</h1>
+
+<h2>Introduction</h2>
+<p>
+In everyday life we collect a lot of information such as marks obtained by students, 
+temperature of a city, rainfall, heights and weights of people etc.  
+Such information is called <b>data</b>.  
+The branch of mathematics which deals with the collection, presentation, analysis and 
+interpretation of data is called <b>Statistics</b>.
+</p>
+
+<h2>Objectives of Studying Data</h2>
+<ul>
+    <li>To understand large amounts of information easily.</li>
+    <li>To compare different sets of information.</li>
+    <li>To make predictions and proper decisions.</li>
+    <li>To represent information in an organized manner.</li>
+</ul>
+
+<h2>Types of Data</h2>
+<p>Data can be classified into two main types:</p>
+<ul>
+    <li><b>Primary Data:</b> Data collected directly by the investigator through survey, experiment or observation.</li>
+    <li><b>Secondary Data:</b> Data collected from books, journals, newspapers, websites, reports and other sources.</li>
+</ul>
+
+<h2>Types of Variables</h2>
+<p>
+A variable is a quantity which can change its value.
+</p>
+<ul>
+    <li><b>Discrete Variable:</b> Takes specific fixed values such as number of students in a class.</li>
+    <li><b>Continuous Variable:</b> Can take any value such as height, weight, temperature.</li>
+</ul>
+
+<h2>Mean</h2>
+<p>
+Mean is the average value of the observations.
+</p>
+<div class="formula">Mean = (Sum of all observations) ÷ (Total number of observations)</div>
+
+<h2>Weighted Mean</h2>
+<p>
+When some values are more important than others, weights are assigned and the average obtained is called weighted mean.
+</p>
+<div class="formula">Weighted Mean = Σ(wx) ÷ Σw</div>
+
+<h2>Median</h2>
+<p>
+Median is the middle value when the data is arranged in ascending or descending order.  
+If the number of observations is even, the median is the average of the two middle values.
+</p>
+
+<h2>Mode</h2>
+<p>
+Mode is the observation which occurs the maximum number of times in the data.
+</p>
+
+<h2>Quartiles</h2>
+<p>
+Quartiles divide the data into four equal parts.  
+They are Q1 (first quartile), Q2 (median) and Q3 (third quartile).
+</p>
+
+<h2>Variance</h2>
+<p>
+Variance measures the dispersion or spread of data from its mean.  
+A larger variance shows greater spread in the data.
+</p>
+
+<h2>Coefficient of Variation</h2>
+<p>
+It helps in comparing the variability of two or more data sets.
+</p>
+<div class="formula">Coefficient of Variation = (Standard Deviation ÷ Mean) × 100</div>
+
+<h2>Histogram</h2>
+<p>
+A histogram is a graphical representation of a frequency distribution using rectangular bars.
+It helps in understanding the shape and spread of the data.
+</p>
+
+<h2>Box Plot</h2>
+<p>
+A box plot represents the five number summary of the data:
+minimum value, Q1, median, Q3 and maximum value.
+It helps in identifying the spread and skewness of data.
+</p>
+
+<h2>Skewness</h2>
+<p>
+Skewness describes the symmetry of a distribution.
+</p>
+<ul>
+    <li><b>Positive Skewness:</b> Tail of the distribution is towards the right.</li>
+    <li><b>Negative Skewness:</b> Tail of the distribution is towards the left.</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+The study of data helps us to understand information scientifically and make accurate decisions.  
+Measures like mean, median, mode and graphical tools such as histogram and box plot play an 
+important role in analyzing real life situations.
+</p>
+
+</div>
+
+</body>
+</html>
 
