@@ -34,5 +34,5 @@ the semester with explanations, solved examples, and learning outcomes.
 
 ---
 
-## 🗂 Repository Structure
+
 
