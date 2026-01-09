@@ -1,166 +1,471 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Chapter 1 - Description of Data</title>
+<meta charset="UTF-8">
+<title>Chapter 1 - Description of Data</title>
 
-    <style>
-        body {
-            font-family: "Segoe UI", Arial, sans-serif;
-            background-color: #eef3ff;
-            margin: 0;
-            padding: 20px;
-        }
+<style>
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #eef3f9;
+    margin: 0;
+}
 
-        h1 {
-            text-align: center;
-            color: #1f3c88;
-            margin-bottom: 10px;
-        }
+header {
+    background: linear-gradient(120deg, #0f4c75, #3282b8);
+    color: white;
+    padding: 35px;
+    text-align: center;
+}
 
-        h2 {
-            color: #2c3e50;
-            margin-top: 25px;
-        }
+.container {
+    width: 85%;
+    margin: 30px auto;
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
 
-        p, li {
-            font-size: 17px;
-            line-height: 1.7;
-        }
+h2 {
+    color: #0f4c75;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 6px;
+}
 
-        ul {
-            margin-left: 25px;
-        }
+h3 {
+    color: #1b6ca8;
+}
 
-        .content {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0px 0px 12px rgba(0,0,0,0.2);
-            max-width: 950px;
-            margin: auto;
-        }
+.solution {
+    background: #eef5ff;
+    padding: 18px;
+    margin: 20px 0;
+    border-left: 6px solid #3282b8;
+    border-radius: 6px;
+}
 
-        .formula {
-            background: #f5f7ff;
-            padding: 10px;
-            border-left: 5px solid #4a6ee0;
-            margin: 10px 0;
-            font-weight: bold;
-        }
-    </style>
+ul {
+    margin-left: 25px;
+}
+
+footer {
+    background: #0f4c75;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+</style>
 </head>
 
 <body>
 
-<div class="content">
+<header>
+    <h1>Chapter 1 : Description of Data</h1>
+    <p>Fundamentals of Probability and Statistics</p>
+</header>
 
-<h1>Chapter 1 : Description of Data</h1>
+<div class="container">
 
-<h2>Introduction</h2>
-<p>
-In everyday life we collect a lot of information such as marks obtained by students, 
-temperature of a city, rainfall, heights and weights of people etc.  
-Such information is called <b>data</b>.  
-The branch of mathematics which deals with the collection, presentation, analysis and 
-interpretation of data is called <b>Statistics</b>.
-</p>
+<h2>1. Introduction</h2>
+<p>Data is a collection of numerical or qualitative information collected for a specific purpose. Statistics helps us organize, analyze, and interpret data to make correct decisions.</p>
 
-<h2>Objectives of Studying Data</h2>
+<h2>2. Types of Variables</h2>
 <ul>
-    <li>To understand large amounts of information easily.</li>
-    <li>To compare different sets of information.</li>
-    <li>To make predictions and proper decisions.</li>
-    <li>To represent information in an organized manner.</li>
+<li><b>Qualitative Variables:</b> Non-numerical values such as gender, color, and category.</li>
+<li><b>Quantitative Variables:</b> Numerical values such as height, age, marks, and income.</li>
 </ul>
 
-<h2>Types of Data</h2>
-<p>Data can be classified into two main types:</p>
+<h2>3. Measures of Central Tendency</h2>
+
+<p>Measures of central tendency describe the center of the data and include mean, median, and mode.</p>
+
+<h2>4. Measures of Dispersion</h2>
+
+<p>Measures of dispersion explain how the data values are spread around the center. Important measures include variance, standard deviation, coefficient of variation, and skewness.</p>
+
+<h2>5. Graphical Representation of Data</h2>
 <ul>
-    <li><b>Primary Data:</b> Data collected directly by the investigator through survey, experiment or observation.</li>
-    <li><b>Secondary Data:</b> Data collected from books, journals, newspapers, websites, reports and other sources.</li>
+<li>Histogram</li>
+<li>Frequency Curve</li>
+<li>Ogive</li>
+<li>Box Plot</li>
 </ul>
 
-<h2>Types of Variables</h2>
-<p>
-A variable is a quantity which can change its value.
-</p>
-<ul>
-    <li><b>Discrete Variable:</b> Takes specific fixed values such as number of students in a class.</li>
-    <li><b>Continuous Variable:</b> Can take any value such as height, weight, temperature.</li>
-</ul>
+<h2>6. Solved Problems</h2>
 
-<h2>Mean</h2>
-<p>
-Mean is the average value of the observations.
-</p>
-<div class="formula">Mean = (Sum of all observations) ÷ (Total number of observations)</div>
+<h3>Problem 1: Mean, Median and Mode</h3>
+<div class="solution">
+<b>Find the mean, median and mode of the data:</b><br>
+4, 6, 8, 10, 12, 14, 14, 15
 
-<h2>Weighted Mean</h2>
-<p>
-When some values are more important than others, weights are assigned and the average obtained is called weighted mean.
-</p>
-<div class="formula">Weighted Mean = Σ(wx) ÷ Σw</div>
+<br><br>
+<b>Step 1: Arrange the data</b><br>
+4, 6, 8, 10, 12, 14, 14, 15
 
-<h2>Median</h2>
-<p>
-Median is the middle value when the data is arranged in ascending or descending order.  
-If the number of observations is even, the median is the average of the two middle values.
-</p>
+<br><br>
+<b>Step 2: Find Mean</b><br>
+Sum = 4 + 6 + 8 + 10 + 12 + 14 + 14 + 15 = 83<br>
+Number of observations = 8<br>
+Mean = 83 / 8 = <b>10.375</b>
 
-<h2>Mode</h2>
-<p>
-Mode is the observation which occurs the maximum number of times in the data.
-</p>
+<br><br>
+<b>Step 3: Find Median</b><br>
+Since n = 8 (even), Median = average of 4th and 5th terms<br>
+= (10 + 12) / 2 = <b>11</b>
 
-<h2>Quartiles</h2>
-<p>
-Quartiles divide the data into four equal parts.  
-They are Q1 (first quartile), Q2 (median) and Q3 (third quartile).
-</p>
+<br><br>
+<b>Step 4: Find Mode</b><br>
+14 occurs most frequently → <b>Mode = 14</b>
+</div>
 
-<h2>Variance</h2>
-<p>
-Variance measures the dispersion or spread of data from its mean.  
-A larger variance shows greater spread in the data.
-</p>
+<h3>Problem 2: Variance and Standard Deviation</h3>
+<div class="solution">
+<b>Find the variance and standard deviation of the data:</b><br>
+5, 7, 9, 11, 13
 
-<h2>Coefficient of Variation</h2>
-<p>
-It helps in comparing the variability of two or more data sets.
-</p>
-<div class="formula">Coefficient of Variation = (Standard Deviation ÷ Mean) × 100</div>
+<br><br>
+<b>Step 1: Find Mean</b><br>
+Mean = (5 + 7 + 9 + 11 + 13) / 5 = 45 / 5 = <b>9</b>
 
-<h2>Histogram</h2>
-<p>
-A histogram is a graphical representation of a frequency distribution using rectangular bars.
-It helps in understanding the shape and spread of the data.
-</p>
+<br><br>
+<b>Step 2: Find deviations from mean</b><br>
+5−9 = −4 → (−4)² = 16<br>
+7−9 = −2 → 4<br>
+9−9 = 0 → 0<br>
+11−9 = 2 → 4<br>
+13−9 = 4 → 16
 
-<h2>Box Plot</h2>
-<p>
-A box plot represents the five number summary of the data:
-minimum value, Q1, median, Q3 and maximum value.
-It helps in identifying the spread and skewness of data.
-</p>
+<br><br>
+<b>Step 3: Find Variance</b><br>
+Variance = (16 + 4 + 0 + 4 + 16) / 5 = 40 / 5 = <b>8</b>
 
-<h2>Skewness</h2>
-<p>
-Skewness describes the symmetry of a distribution.
-</p>
-<ul>
-    <li><b>Positive Skewness:</b> Tail of the distribution is towards the right.</li>
-    <li><b>Negative Skewness:</b> Tail of the distribution is towards the left.</li>
-</ul>
+<br><br>
+<b>Step 4: Find Standard Deviation</b><br>
+Standard Deviation = √8 = <b>2.828</b>
+<h3>Problem 3: Combined Mean</h3>
+<div class="solution">
+<b>Given:</b><br>
+Group A: 20 students, mean = 45<br>
+Group B: 30 students, mean = 55
 
-<h2>Conclusion</h2>
-<p>
-The study of data helps us to understand information scientifically and make accurate decisions.  
-Measures like mean, median, mode and graphical tools such as histogram and box plot play an 
-important role in analyzing real life situations.
-</p>
+<br><br>
+<b>Step 1: Formula for Combined Mean</b><br>
+Combined Mean = (n₁x̄₁ + n₂x̄₂) / (n₁ + n₂)
+
+<br><br>
+<b>Step 2: Substitution</b><br>
+= (20×45 + 30×55) / (20 + 30)<br>
+= (900 + 1650) / 50<br>
+= 2550 / 50 = <b>51</b>
+
+<br><br>
+<b>Answer:</b> Combined Mean = <b>51</b>
+</div>
+
+<h3>Problem 4: Mean Using Step Deviation Method</h3>
+<div class="solution">
+<b>Find the mean of:</b><br>
+10, 20, 30, 40, 50
+
+<br><br>
+<b>Step 1:</b> Take assumed mean A = 30
+
+<br><br>
+<b>Step 2:</b> Find deviations (d = x − A):<br>
+10−30 = −20<br>
+20−30 = −10<br>
+30−30 = 0<br>
+40−30 = 10<br>
+50−30 = 20
+
+<br><br>
+<b>Step 3:</b> Find Σd = −20 − 10 + 0 + 10 + 20 = 0
+
+<br><br>
+<b>Step 4:</b> Mean = A + (Σd / n)<br>
+= 30 + (0 / 5) = <b>30</b>
+</div>
+
+<h3>Problem 5: Finding Median from Discrete Frequency Distribution</h3>
+<div class="solution">
+<b>Marks:</b> 10, 20, 30, 40, 50<br>
+<b>Frequency:</b> 3, 7, 12, 5, 3
+
+<br><br>
+<b>Step 1:</b> Find total frequency N<br>
+N = 3 + 7 + 12 + 5 + 3 = 30
+
+<br><br>
+<b>Step 2:</b> Find cumulative frequency
+
+<table border="1" cellpadding="6">
+<tr><th>Marks</th><th>f</th><th>cf</th></tr>
+<tr><td>10</td><td>3</td><td>3</td></tr>
+<tr><td>20</td><td>7</td><td>10</td></tr>
+<tr><td>30</td><td>12</td><td>22</td></tr>
+<tr><td>40</td><td>5</td><td>27</td></tr>
+<tr><td>50</td><td>3</td><td>30</td></tr>
+</table>
+
+<br><br>
+<b>Step 3:</b> Find N/2 = 30/2 = 15  
+The cumulative frequency just greater than 15 is 22
+
+<br><br>
+<b>Answer:</b> Median = <b>30</b>
+<h3> Histogram </h3>
+
+<div class="solution">
+<b>Given Data:</b>
+
+<table border="1" cellpadding="6">
+<tr><th>Class Interval</th><th>Frequency</th></tr>
+<tr><td>0–10</td><td>4</td></tr>
+<tr><td>10–20</td><td>7</td></tr>
+<tr><td>20–30</td><td>12</td></tr>
+<tr><td>30–40</td><td>5</td></tr>
+</table>
+
+<br>
+<b>Step 1:</b> Draw X-axis and Y-axis  
+<br>
+<b>Step 2:</b> Mark class intervals on X-axis  
+<br>
+<b>Step 3:</b> Mark frequencies on Y-axis  
+<br>
+<b>Step 4:</b> Draw rectangles of equal width for each class
+
+<br><br>
+
+Maximum frequency occurs in class 20–30.
+</div>
+
+<!-- HISTOGRAM GRAPH -->
+<svg width="520" height="300" style="background:white; border:1px solid #ccc">
+
+<!-- Axes -->
+<line x1="60" y1="30" x2="60" y2="250" stroke="black"/>
+<line x1="60" y1="250" x2="470" y2="250" stroke="black"/>
+
+<!-- Bars -->
+<rect x="90" y="170" width="60" height="80" fill="#3282b8"/>
+<rect x="160" y="120" width="60" height="130" fill="#3282b8"/>
+<rect x="230" y="70" width="60" height="180" fill="#3282b8"/>
+<rect x="300" y="150" width="60" height="100" fill="#3282b8"/>
+
+<!-- X-axis labels -->
+<text x="95" y="270">0-10</text>
+<text x="165" y="270">10-20</text>
+<text x="235" y="270">20-30</text>
+<text x="305" y="270">30-40</text>
+
+<!-- Y-axis label -->
+<text x="15" y="40">Frequency</text>
+<text x="230" y="295">Class Interval</text>
+<h3> Frequency Curve </h3>
+
+<div class="solution">
+<b>Given Data:</b>
+
+<table border="1" cellpadding="6">
+<tr><th>Class Interval</th><th>Frequency</th></tr>
+<tr><td>0–10</td><td>4</td></tr>
+<tr><td>10–20</td><td>7</td></tr>
+<tr><td>20–30</td><td>12</td></tr>
+<tr><td>30–40</td><td>5</td></tr>
+</table>
+
+<br>
+<b>Step 1:</b> Find mid-points of each class interval  
+<br>0–10 → 5  
+<br>10–20 → 15  
+<br>20–30 → 25  
+<br>30–40 → 35  
+
+<br><br>
+<b>Step 2:</b> Draw X-axis for mid-points and Y-axis for frequencies  
+<br>
+<b>Step 3:</b> Plot the points (5,4), (15,7), (25,12), (35,5)
+
+<br><br>
+<b>Step 4:</b> Join the plotted points smoothly to form frequency curve
+
+<br><br>
+
 
 </div>
+
+<!-- FREQUENCY CURVE GRAPH -->
+<svg width="520" height="300" style="background:white; border:1px solid #ccc">
+
+<!-- Axes -->
+<line x1="60" y1="30" x2="60" y2="250" stroke="black"/>
+<line x1="60" y1="250" x2="470" y2="250" stroke="black"/>
+
+<!-- Curve -->
+<path d="M 90 210 
+         Q 140 180 160 160
+         Q 200 120 230 90
+         Q 270 110 300 140
+         Q 340 190 370 170" 
+      fill="none" stroke="#3282b8" stroke-width="3"/>
+
+<!-- Points -->
+<circle cx="90" cy="210" r="4" fill="#3282b8"/>
+<circle cx="160" cy="160" r="4" fill="#3282b8"/>
+<circle cx="230" cy="90" r="4" fill="#3282b8"/>
+<circle cx="300" cy="140" r="4" fill="#3282b8"/>
+
+<!-- Labels -->
+<text x="85" y="270">5</text>
+<text x="155" y="270">15</text>
+<text x="225" y="270">25</text>
+<text x="295" y="270">35</text>
+
+<text x="10" y="40">Frequency</text>
+<text x="210" y="295">Class Mid-point</text>
+<h3> Ogive (Cumulative Frequency Curve)</h3>
+
+<b>Given Data:</b>
+
+<table border="1" cellpadding="6">
+<tr><th>Class Interval</th><th>Frequency</th></tr>
+<tr><td>0–10</td><td>4</td></tr>
+<tr><td>10–20</td><td>7</td></tr>
+<tr><td>20–30</td><td>12</td></tr>
+<tr><td>30–40</td><td>5</td></tr>
+</table>
+
+<br>
+<b>Step 1: Form cumulative frequency table</b>
+
+<table border="1" cellpadding="6">
+<tr><th>Upper Class Boundary</th><th>Cumulative Frequency</th></tr>
+<tr><td>10</td><td>4</td></tr>
+<tr><td>20</td><td>11</td></tr>
+<tr><td>30</td><td>23</td></tr>
+<tr><td>40</td><td>28</td></tr>
+</table>
+
+<br>
+<b>Step 2:</b> Draw X-axis for class boundary and Y-axis for cumulative frequency  
+<br>
+<b>Step 3:</b> Plot points: (10,4), (20,11), (30,23), (40,28)  
+<br>
+<b>Step 4:</b> Join points smoothly to obtain ogive
+
+<br><br>
+<b>Use:</b>  
+Median, quartiles and percentiles can be found from ogive.
+</div>
+
+<!-- OGIVE GRAPH -->
+<svg width="520" height="300" style="background:white; border:1px solid #ccc">
+
+<!-- Axes -->
+<line x1="60" y1="30" x2="60" y2="250" stroke="black"/>
+<line x1="60" y1="250" x2="470" y2="250" stroke="black"/>
+
+<!-- Ogive curve -->
+<path d="M 90 220 
+         Q 150 200 160 170
+         Q 200 120 230 90
+         Q 270 60 300 50" 
+      fill="none" stroke="#3282b8" stroke-width="3"/>
+
+<!-- Points -->
+<circle cx="90" cy="220" r="4" fill="#3282b8"/>
+<circle cx="160" cy="170" r="4" fill="#3282b8"/>
+<circle cx="230" cy="90" r="4" fill="#3282b8"/>
+<circle cx="300" cy="50" r="4" fill="#3282b8"/>
+
+<!-- Labels -->
+<text x="80" y="270">10</text>
+<text x="150" y="270">20</text>
+<text x="220" y="270">30</text>
+<text x="290" y="270">40</text>
+
+<text x="5" y="40">Cumulative Frequency</text>
+<text x="200" y="295">Upper Class Boundary</text>
+<h3> Box Plot </h3>
+
+<div class="solution">
+<b>Given Data:</b>  
+12, 15, 18, 20, 25, 30, 35, 40
+
+<br><br>
+<b>Step 1: Arrange the data</b><br>
+12, 15, 18, 20, 25, 30, 35, 40
+
+<br><br>
+<b>Step 2: Find Median (Q2)</b><br>
+Number of observations = 8 (even)<br>
+Median = (4th + 5th) / 2 = (20 + 25) / 2 = <b>22.5</b>
+
+<br><br>
+<b>Step 3: Find First Quartile (Q1)</b><br>
+Lower half: 12, 15, 18, 20<br>
+Q1 = (15 + 18) / 2 = <b>16.5</b>
+
+<br><br>
+<b>Step 4: Find Third Quartile (Q3)</b><br>
+Upper half: 25, 30, 35, 40<br>
+Q3 = (30 + 35) / 2 = <b>32.5</b>
+
+<br><br>
+<b>Step 5: Identify minimum and maximum values</b><br>
+Minimum = 12, Maximum = 40
+
+<br><br>
+
+Five number summary = (12, 16.5, 22.5, 32.5, 40)
+</div>
+
+<!-- BOX PLOT GRAPH -->
+<svg width="520" height="150" style="background:white; border:1px solid #ccc">
+
+<!-- Number line -->
+<line x1="50" y1="75" x2="470" y2="75" stroke="black"/>
+
+<!-- Whiskers -->
+<line x1="90" y1="75" x2="160" y2="75" stroke="#3282b8" stroke-width="3"/>
+<line x1="310" y1="75" x2="430" y2="75" stroke="#3282b8" stroke-width="3"/>
+
+<!-- Box -->
+<rect x="160" y="50" width="150" height="50" fill="none" stroke="#3282b8" stroke-width="3"/>
+
+<!-- Median -->
+<line x1="235" y1="50" x2="235" y2="100" stroke="#3282b8" stroke-width="3"/>
+
+<!-- Labels -->
+<text x="75" y="110">12</text>
+<text x="145" y="110">16.5</text>
+<text x="220" y="110">22.5</text>
+<text x="300" y="110">32.5</text>
+<text x="415" y="110">40</text>
+
+<text x="200" y="140">Data Values</text>
+</svg>
+</svg>
+
+</svg>
+</svg>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+<p>Statistics Portfolio — Chapter 1</p>
+</footer>
 
 </body>
 </html>
 
+       
