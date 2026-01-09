@@ -1,1 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Maths Portfolio - Chapter 3: Random Variables</title>
 
+<style>
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #eef3f9;
+    margin: 0;
+}
+
+header {
+    background: linear-gradient(120deg, #0f4c75, #3282b8);
+    color: white;
+    padding: 35px;
+    text-align: center;
+}
+
+.container {
+    width: 85%;
+    margin: 30px auto;
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+h2 {
+    color: #0f4c75;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 6px;
+    margin-top: 40px;
+}
+
+h3 {
+    color: #1b6ca8;
+}
+
+.solution {
+    background: #eef5ff;
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 6px solid #3282b8;
+    border-radius: 6px;
+    line-height: 1.6;
+}
+
+.step {
+    font-weight: bold;
+    color: #0f4c75;
+    display: block;
+    margin-top: 10px;
+}
+
+.formula {
+    font-style: italic;
+    font-weight: bold;
+    color: #0f4c75;
+    background: #f0f0f0;
+    padding: 5px 12px;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 5px 0;
+}
+
+footer {
+    background: #0f4c75;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Chapter 3: Random Variables & Probability Distributions</h1>
+    <p>Fundamentals of Probability and Statistics</p>
+</header>
+
+<div class="container">
+
+    <h2>1. Chapter Overview</h2>
+    <p>This chapter focuses on quantifying uncertainty through random variables and identifying the mathematical patterns (distributions) that govern data in engineering and science.</p>
+
+    <h2>2. Key Concepts</h2>
+    <ul>
+        <li><b>Discrete Random Variables:</b> Values are countable (e.g., Binomial, Poisson).</li>
+        <li><b>Continuous Random Variables:</b> Values exist within a range (e.g., Normal Distribution).</li>
+        <li><b>Probability Mass Function (PMF):</b> For discrete variables.</li>
+        <li><b>Probability Density Function (PDF):</b> For continuous variables.</li>
+    </ul>
+
+    <h2>3. Step-by-Step Solved Problems</h2>
+
+    <h3>Problem 1: Finding the Constant 'k' and Mean</h3>
+    <div class="solution">
+        <b>Question:</b> A discrete random variable X has the probability distribution: 
+        <br>X = {0, 1, 2, 3} with P(X) = {0.1, k, 2k, 0.3}. Find 'k' and the Mean E[X].
+        <br><br>
+        <span class="step">Step 1: Use the property of Total Probability</span>
+        The sum of all probabilities in a distribution must equal 1.
+        <br><span class="formula">Σ P(X) = 1</span>
+        <br>0.1 + k + 2k + 0.3 = 1
+        <br>0.4 + 3k = 1
+        <br>3k = 0.6 → <b>k = 0.2</b>
+        <br><br>
+        <span class="step">Step 2: Update the distribution</span>
+        P(X=1) = 0.2, P(X=2) = 0.4
+        <br><br>
+        <span class="step">Step 3: Calculate the Mean (Expected Value)</span>
+        <span class="formula">E[X] = Σ [x * P(x)]</span>
+        <br>E[X] = (0 * 0.1) + (1 * 0.2) + (2 * 0.4) + (3 * 0.3)
+        <br>E[X] = 0 + 0.2 + 0.8 + 0.9
+        <br><b>Mean E[X] = 1.9</b>
+    </div>
+
+    <h3>Problem 2: Binomial Distribution (Success/Failure)</h3>
+    
+    <div class="solution">
+        <b>Question:</b> The probability that a component is defective is 0.1. If 5 components are tested, what is the probability that exactly 2 are defective?
+        <br><br>
+        <span class="step">Step 1: Identify Parameters</span>
+        n = 5 (trials), p = 0.1 (success/defective), q = 0.9 (failure), x = 2
+        <br><br>
+        <span class="step">Step 2: Apply Binomial Formula</span>
+        <span class="formula">P(X=x) = <sup>n</sup>C<sub>x</sub> * p<sup>x</sup> * q<sup>n-x</sup></span>
+        <br>P(X=2) = <sup>5</sup>C<sub>2</sub> * (0.1)<sup>2</sup> * (0.9)<sup>5-2</sup>
+        <br><br>
+        <span class="step">Step 3: Calculate Values</span>
+        <sup>5</sup>C<sub>2</sub> = 10
+        <br>P(X=2) = 10 * 0.01 * (0.9)<sup>3</sup>
+        <br>P(X=2) = 10 * 0.01 * 0.729
+        <br><b>P(X=2) = 0.0729</b>
+    </div>
+
+    <h3>Problem 3: Normal Distribution (Z-Score)</h3>
+    
+    <div class="solution">
+        <b>Question:</b> The mean weight of a product is 50g with a standard deviation of 2g. Find the probability that a product weighs more than 53g.
+        <br><br>
+        <span class="step">Step 1: Identify Parameters</span>
+        μ = 50, σ = 2, X = 53
+        <br><br>
+        <span class="step">Step 2: Standardize to Z-score</span>
+        <span class="formula">Z = (X - μ) / σ</span>
+        <br>Z = (53 - 50) / 2 = 3 / 2 = <b>1.5</b>
+        <br><br>
+        <span class="step">Step 3: Find Area using Standard Normal Table</span>
+        We need P(X > 53), which is equivalent to P(Z > 1.5).
+        <br>From tables, Area from 0 to 1.5 = 0.4332
+        <br>P(Z > 1.5) = 0.5 - 0.4332
+        <br><b>Probability = 0.0668 (6.68%)</b>
+    </div>
+
+    <h3>Problem 4: Poisson Distribution (Rate per Interval)</h3>
+    <div class="solution">
+        <b>Question:</b> On average, 2 customers arrive at a counter every minute. Find the probability that exactly 3 customers arrive in a given minute.
+        <br><br>
+        <span class="step">Step 1: Identify Parameter (λ)</span>
+        λ (Average rate) = 2
+        <br><br>
+        <span class="step">Step 2: Apply Poisson Formula</span>
+        <span class="formula">P(X=x) = (e<sup>-λ</sup> * λ<sup>x</sup>) / x!</span>
+        <br>P(X=3) = (e<sup>-2</sup> * 2<sup>3</sup>) / 3!
+        <br><br>
+        <span class="step">Step 3: Calculate</span>
+        e<sup>-2</sup> ≈ 0.1353
+        <br>P(X=3) = (0.1353 * 8) / 6
+        <br>P(X=3) = 1.0824 / 6
+        <br><b>P(X=3) = 0.1804</b>
+        <h2>1. Binomial Distribution</h2>
+    <p>A discrete distribution used when an experiment has exactly two outcomes (Success/Failure) repeated over 'n' independent trials.</p>
+    
+
+    <div class="solution">
+        <h3>Solved Problem: Binomial</h3>
+        <b>Question:</b> A MCQ test has 10 questions, each with 4 options. A student guesses all answers. Find the probability of getting exactly 3 correct.
+        <br><br>
+        <span class="step">Step 1: Identify Parameters</span>
+        n = 10, p (success) = 1/4 = 0.25, q (failure) = 0.75, x = 3
+        <br><br>
+        <span class="step">Step 2: Apply Formula</span>
+        <span class="formula">P(X = x) = <sup>n</sup>C<sub>x</sub> p<sup>x</sup> q<sup>n-x</sup></span>
+        <br>P(X = 3) = <sup>10</sup>C<sub>3</sub> (0.25)<sup>3</sup> (0.75)<sup>7</sup>
+        <br><br>
+        <span class="step">Step 3: Calculation</span>
+        <sup>10</sup>C<sub>3</sub> = 120
+        <br>P(X = 3) = 120 * 0.0156 * 0.1335
+        <br><b>P(X = 3) ≈ 0.2503</b>
+    </div>
+
+    <h2>2. Poisson Distribution</h2>
+    <p>A discrete distribution that models the number of events occurring within a fixed interval of time or space.</p>
+    
+
+[Image of Poisson Distribution formula]
+
+
+    <div class="solution">
+        <h3>Solved Problem: Poisson</h3>
+        <b>Question:</b> If the average number of typos on a page is 2, find the probability that a page has no typos.
+        <br><br>
+        <span class="step">Step 1: Identify Parameters</span>
+        λ (mean) = 2, x = 0
+        <br><br>
+        <span class="step">Step 2: Apply Formula</span>
+        <span class="formula">P(X = x) = (e<sup>-λ</sup> * λ<sup>x</sup>) / x!</span>
+        <br>P(X = 0) = (e<sup>-2</sup> * 2<sup>0</sup>) / 0!
+        <br><br>
+        <span class="step">Step 3: Calculation</span>
+        P(X = 0) = e<sup>-2</sup> * 1 / 1
+        <br><b>P(X = 0) ≈ 0.1353</b>
+    </div>
+
+    <h2>3. Normal Distribution</h2>
+    <p>A continuous distribution that is symmetric and bell-shaped. It is defined by its Mean (μ) and Standard Deviation (σ).</p>
+    
+
+[Image of the normal distribution curve showing standard deviations]
+
+
+    <div class="solution">
+        <h3>Solved Problem: Normal</h3>
+        <b>Question:</b> The life of a battery is normally distributed with μ = 100 hours and σ = 10 hours. Find the probability that a battery lasts between 100 and 115 hours.
+        <br><br>
+        <span class="step">Step 1: Convert to Standard Normal (Z-score)</span>
+        For x = 100: Z<sub>1</sub> = (100 - 100) / 10 = 0
+        <br>For x = 115: Z<sub>2</sub> = (115 - 100) / 10 = 1.5
+        <br><br>
+        <span class="step">Step 2: Identify Area</span>
+        We need the area P(0 < Z < 1.5).
+        <br><br>
+        <span class="step">Step 3: Use Z-Table</span>
+        From the Standard Normal Table, the area for Z = 1.5 is 0.4332.
+        <br><b>Probability = 0.4332 (43.32%)</b>
+    </div>
+
+</div>
+
+<footer>
+   
+</footer>
+
+</body>
+</html>
