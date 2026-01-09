@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Maths Portfolio - Chapter 4: Statistical Inference</title>
+
+<style>
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #eef3f9;
+    margin: 0;
+}
+
+header {
+    background: linear-gradient(120deg, #0f4c75, #3282b8);
+    color: white;
+    padding: 35px;
+    text-align: center;
+}
+
+.container {
+    width: 85%;
+    margin: 30px auto;
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+h2 {
+    color: #0f4c75;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 6px;
+    margin-top: 40px;
+}
+
+h3 {
+    color: #1b6ca8;
+    margin-top: 25px;
+}
+
+.solution {
+    background: #eef5ff;
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 6px solid #3282b8;
+    border-radius: 6px;
+    line-height: 1.6;
+}
+
+.step {
+    font-weight: bold;
+    color: #0f4c75;
+    display: block;
+    margin-top: 10px;
+}
+
+.formula-box {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.formula {
+    font-style: italic;
+    font-weight: bold;
+    color: #0f4c75;
+    font-size: 1.1em;
+}
+
+.highlight {
+    color: #d9534f;
+    font-weight: bold;
+}
+
+footer {
+    background: #0f4c75;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Chapter 4: Statistical Inference</h1>
+    <p>Hypothesis Testing, Confidence Intervals, and Sample Size Determination</p>
+</header>
+
+<div class="container">
+
+    <h2>1. Basic Terminologies of Hypothesis Testing</h2>
+    <p>Statistical inference uses sample data to make conclusions about a whole population. Hypothesis testing is a formal procedure for investigating our ideas about the world using statistics.</p>
+    
+    <ul>
+        <li><b>Null Hypothesis (H<sub>0</sub>):</b> The claim of "no effect" or "no difference." It is assumed true until evidence suggests otherwise.</li>
+        <li><b>Alternative Hypothesis (H<sub>1</sub>):</b> The claim we are trying to find evidence for.</li>
+        <li><b>Level of Significance (α):</b> The probability of rejecting the null hypothesis when it is actually true (Type I Error). Commonly 0.05 or 0.01.</li>
+        <li><b>P-value:</b> The probability of obtaining results at least as extreme as the observed results, assuming H<sub>0</sub> is true.</li>
+        <li><b>Critical Value:</b> The threshold value that defines the rejection region.</li>
+    </ul>
+
+    
+
+    <h2>2. Confidence Intervals (CI)</h2>
+    <p>A confidence interval provides a range of values within which the true population parameter is likely to fall.</p>
+    
+    <div class="formula-box">
+        <span class="formula">CI = Sample Mean ± (Critical Value * Standard Error)</span>
+        <br><br>
+        For Means: <span class="formula">x̄ ± Z<sub>α/2</sub> * (σ / √n)</span>
+    </div>
+
+    <h2>3. Sample Size Determination</h2>
+    <p>To ensure a study has enough power to detect an effect, we calculate the minimum sample size (n) required based on a desired margin of error (E).</p>
+    
+    <div class="formula-box">
+        <span class="formula">n = (Z<sub>α/2</sub> * σ / E)<sup>2</sup></span>
+    </div>
+
+    <h2>4. Step-by-Step Solved Problems</h2>
+
+    <h3>Problem 1: Hypothesis Test for Single Mean (Large Sample)</h3>
+    <div class="solution">
+        <b>Question:</b> A manufacturer claims that the mean life of a battery is 500 days. A sample of 100 batteries shows a mean life of 490 days with a standard deviation of 40 days. Test the claim at 5% significance level.
+        <br><br>
+        <span class="step">Step 1: State the Hypotheses</span>
+        H<sub>0</sub>: μ = 500 (Claim is true)
+        <br>H<sub>1</sub>: μ ≠ 500 (Two-tailed test)
+        <br><br>
+        <span class="step">Step 2: Identify Parameters</span>
+        n = 100, x̄ = 490, σ = 40, α = 0.05
+        <br><br>
+        <span class="step">Step 3: Calculate Test Statistic (Z)</span>
+        <span class="formula">Z = (x̄ - μ) / (σ / √n)</span>
+        <br>Z = (490 - 500) / (40 / √100)
+        <br>Z = -10 / 4 = <span class="highlight">-2.5</span>
+        <br><br>
+        <span class="step">Step 4: Determine Critical Value</span>
+        For α = 0.05 (Two-tailed), Z<sub>critical</sub> = ±1.96.
+        <br><br>
+        <span class="step">Step 5: Conclusion</span>
+        Since | -2.5 | > 1.96, the test statistic falls in the rejection region. 
+        <br><b>Decision:</b> Reject H<sub>0</sub>. There is sufficient evidence to say the mean life is not 500 days.
+    </div>
+
+    
+
+    <h3>Problem 2: Test for Difference of Means</h3>
+    <div class="solution">
+        <b>Question:</b> Two groups of students were taught using different methods. 
+        <br>Group A: n<sub>1</sub>=50, x̄<sub>1</sub>=75, s<sub>1</sub>=8
+        <br>Group B: n<sub>2</sub>=60, x̄<sub>2</sub>=72, s<sub>2</sub>=10
+        <br>Is there a significant difference between the two methods at 1% significance?
+        <br><br>
+        <span class="step">Step 1: State Hypotheses</span>
+        H<sub>0</sub>: μ<sub>1</sub> = μ<sub>2</sub>
+        <br>H<sub>1</sub>: μ<sub>1</sub> ≠ μ<sub>2</sub>
+        <br><br>
+        <span class="step">Step 2: Calculate Standard Error (SE)</span>
+        SE = √[(s<sub>1</sub><sup>2</sup>/n<sub>1</sub>) + (s<sub>2</sub><sup>2</sup>/n<sub>2</sub>)]
+        <br>SE = √[(64/50) + (100/60)] = √[1.28 + 1.66] = 1.714
+        <br><br>
+        <span class="step">Step 3: Calculate Z-test Statistic</span>
+        Z = (x̄<sub>1</sub> - x̄<sub>2</sub>) / SE
+        <br>Z = (75 - 72) / 1.714 = <span class="highlight">1.75</span>
+        <br><br>
+        <span class="step">Step 4: Conclusion</span>
+        For α = 0.01, Z<sub>critical</sub> = ±2.58. 
+        <br>Since 1.75 < 2.58, we <b>Fail to Reject H<sub>0</sub></b>. 
+        <br><b>Result:</b> No significant difference between methods.
+    </div>
+
+    <h3>Problem 3: Hypothesis Test for Proportions</h3>
+    <div class="solution">
+        <b>Question:</b> A politician claims that 60% of voters support him. In a sample of 200 voters, 108 support him. Test the claim at α=0.05.
+        <br><br>
+        <span class="step">Step 1: State Hypotheses</span>
+        H<sub>0</sub>: P = 0.60
+        <br>H<sub>1</sub>: P ≠ 0.60
+        <br><br>
+        <span class="step">Step 2: Calculate Sample Proportion (p̂)</span>
+        p̂ = 108 / 200 = 0.54
+        <br><br>
+        <span class="step">Step 3: Calculate Z-test Statistic</span>
+        <span class="formula">Z = (p̂ - P) / √[P(1-P)/n]</span>
+        <br>Z = (0.54 - 0.60) / √[(0.6 * 0.4) / 200]
+        <br>Z = -0.06 / 0.0346 = <span class="highlight">-1.73</span>
+        <br><br>
+        <span class="step">Step 4: Conclusion</span>
+        Critical Z = ±1.96. 
+        <br>Since |-1.73| < 1.96, we <b>Fail to Reject H<sub>0</sub></b>. 
+        <br><b>Result:</b> The claim that 60% support him stands.
+    </div>
+
+    <h3>Problem 4: Constructing a Confidence Interval</h3>
+    <div class="solution">
+        <b>Question:</b> A sample of 64 measurements has a mean of 20 and a standard deviation of 4. Find the 95% confidence interval for the population mean.
+        <br><br>
+        <span class="step">Step 1: Identify Values</span>
+        n=64, x̄=20, σ=4, Z<sub>0.05/2</sub> = 1.96
+        <br><br>
+        <span class="step">Step 2: Calculate Margin of Error (E)</span>
+        E = 1.96 * (4 / √64) = 1.96 * 0.5 = 0.98
+        <br><br>
+        <span class="step">Step 3: Determine Interval</span>
+        Lower Limit = 20 - 0.98 = 19.02
+        <br>Upper Limit = 20 + 0.98 = 20.98
+        <br><br>
+        <b>95% CI: [19.02, 20.98]</b>
+        <h2>2. Lab: Probability Distributions & Hypothesis Testing</h2>
+        <p>This lab demonstrates how to use Python for statistical testing of proportions and means.</p>
+
+        <h3>Task A: Probability Distribution (Normal)</h3>
+        <p>Calculating the probability of a range using the Cumulative Distribution Function (CDF).</p>
+        <div class="code-block">
+            <span class="comment"># Finding P(X < 115) for Mean=100, Std=10</span><br>
+            from scipy.stats import norm<br>
+            prob = norm.cdf(115, 100, 10)<br>
+            print(f"Probability: {prob:.4f}")
+        </div>
+
+        <h3>Task B: Testing of Hypothesis for Single Mean</h3>
+        <p>Used to check if a sample mean significantly differs from a known population mean.</p>
+        <div class="code-block">
+            <span class="comment"># One-sample Z-test</span><br>
+            from statsmodels.stats.weightstats import ztest<br>
+            data = [490, 510, 505, 488, 495, 500, 515, 480]<br>
+            z_stat, p_val = ztest(data, value=500)<br>
+            print(f"P-value: {p_val:.4f}")
+        </div>
+
+        <h3>Task C: Testing for Difference of Means</h3>
+        <p>Comparing whether the means of two independent groups are equal.</p>
+        <div class="code-block">
+            <span class="comment"># Independent Two-Sample T-test</span><br>
+            from scipy.stats import ttest_ind<br>
+            group1 = [25, 30, 28, 35, 32]<br>
+            group2 = [20, 22, 24, 21, 23]<br>
+            t_stat, p_val = ttest_ind(group1, group2)<br>
+            print(f"Conclusion: {'Reject H0' if p_val < 0.05 else 'Fail to Reject H0'}")
+        </div>
+
+        
+
+       
+        </div>
+    </div>
+
+    <h2>3. Summary of Statistical Tests</h2>
+    <table>
+        <tr>
+            <th>Test Type</th>
+            <th>When to use</th>
+            <th>Python Function</th>
+        </tr>
+        <tr>
+            <td>Single Mean</td>
+            <td>Compare sample mean to a constant</td>
+            <td><code>ztest()</code> or <code>ttest_1samp()</code></td>
+        </tr>
+        <tr>
+            <td>Difference of Means</td>
+            <td>Compare two separate groups</td>
+            <td><code>ttest_ind()</code></td>
+        </tr>
+        <tr>
+            <td>Proportions</td>
+            <td>Categorical data (Yes/No, Defective/Good)</td>
+            <td><code>proportions_ztest()</code></td>
+        </tr>
+    </table>
+    </div>
+
+</div>
+
+<footer>
+    <p>Statistics Portfolio — Chapter 4 | Statistical Inference</p>
+</footer>
+
+</body>
+</html>
+   
